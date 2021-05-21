@@ -23,6 +23,7 @@
     </thead>
     <tbody>
         @foreach($clientes as $cliente)
+        <!-- <linha :id="{{ $cliente->id }}" :razaoSocial="{{ $cliente->razao_social}}" :nomeFantasia="{{$cliente->nome_fantasia}}" :nomeResponsavel="{{$cliente->nome_responsavel}}"></linha> -->
         <tr>
             <td>{{$cliente->id}}</td>
             <td>{{$cliente->razao_social}}</td>

@@ -21,3 +21,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('propostas', 'PropostaController');
     Route::post('/updatestatus', 'PropostaController@updateStatus');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
