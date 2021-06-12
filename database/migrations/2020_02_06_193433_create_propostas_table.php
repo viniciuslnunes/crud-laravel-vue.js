@@ -18,8 +18,10 @@ class CreatePropostasTable extends Migration
 
             $table->unsignedBigInteger('cliente_id');
             $table->foreign('cliente_id')->references('id')->on('clientes')->onDelete('cascade');
+
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+
 
             $table->string('endereco', 150);
             $table->float('valor_total', 8, 2);

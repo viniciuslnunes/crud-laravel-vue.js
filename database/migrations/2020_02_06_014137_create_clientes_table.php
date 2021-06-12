@@ -19,6 +19,7 @@ class CreateClientesTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
 
+            // $table->foreign('user_id')->constrained();
             $table->string('razao_social', 150);
             $table->string('nome_fantasia', 100);
             $table->string('cnpj', 14);
